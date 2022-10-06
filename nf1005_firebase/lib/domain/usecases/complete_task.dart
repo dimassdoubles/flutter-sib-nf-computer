@@ -5,7 +5,7 @@ class CompleteTask {
 
   CompleteTask({required this.repository});
 
-  Future<void> call(String id) async {
+  Future<void> call({required String id}) async {
     return await repository.completeTask(id);
   }
 }

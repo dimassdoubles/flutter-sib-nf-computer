@@ -8,6 +8,7 @@ import 'package:nf1005_firebase/domain/usecases/add_task.dart';
 import 'package:nf1005_firebase/domain/usecases/complete_task.dart';
 import 'package:nf1005_firebase/domain/usecases/get_tasks.dart';
 import 'package:nf1005_firebase/firebase_options.dart';
+import 'package:nf1005_firebase/presentation/bloc/task_bloc.dart';
 
 final getIt = GetIt.instance;
 
@@ -39,6 +40,14 @@ Future<void> setup() async {
   getIt.registerLazySingleton(
     () => CompleteTask(
       repository: getIt(),
+    ),
+  );
+
+  getIt.registerSingleton<TaskBloc>(
+    TaskBloc(
+      getTasks: getIt(),
+      addTask: getIt(),
+      completeTask: getIt(),
     ),
   );
 }
