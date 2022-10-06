@@ -1,8 +1,10 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:nf1005_firebase/presentation/pages/home_page.dart';
+import 'injections.dart' as injections;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await injections.setup();
   runApp(const MyApp());
 }
 
