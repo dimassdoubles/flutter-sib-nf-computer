@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nf1005_firebase/presentation/pages/home_page.dart';
+import 'package:nf1005_firebase/share/styles/themes.dart';
 import 'injections.dart' as injections;
 
 void main() async {
@@ -13,9 +14,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: themeData,
+      home: const HomePage(),
     );
   }
 }

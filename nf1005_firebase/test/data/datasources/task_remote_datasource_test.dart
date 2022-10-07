@@ -1,7 +1,6 @@
 import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nf1005_firebase/data/datasources/task_remote_datasource.dart';
-import 'package:nf1005_firebase/domain/entities/task.dart';
 
 void main() async {
   final fakeFireStore = FakeFirebaseFirestore();
